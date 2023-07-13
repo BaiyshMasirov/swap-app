@@ -1,9 +1,14 @@
+using System.Net;
+
 var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddControllersWithViews();
 // Add services to the container.
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
+builder.Services.AddControllersWithViews();
+builder.WebHost
+   .ConfigureKestrel(options => options.Listen(IPAddress.Loopback, 5050));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
