@@ -612,8 +612,11 @@ header.header-fixed {
 }
 
 .navbar-header .navbar-brand {
-	padding: 0;
-	margin-right: 0;
+	  display: flex;
+  justify-content: center;
+  align-items: center; 
+  max-height: 40px;  
+  max-width: 250px;
 }
 
 /* - Navigation Menu Style   //----------------- */
