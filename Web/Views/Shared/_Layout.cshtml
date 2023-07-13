@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Web</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Web.styles.css" asp-append-version="true" />
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link type="image/x-icon" href="~/images/fav-icon.png" rel="icon">
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="~/css/cryptoz.css">
+	<link rel="stylesheet" type="text/css" href="~/css/responsive.css">
+
+</head>
+<body>
+    <!-- Start preloader -->
+    <div id="preloader">
+        <div class="sk-cube-grid">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+        </div>
+    </div>
+    <!-- End preloader -->
+	<!-- Header start -->
+	<header id="header">
+		<div class="container">
+			<div class="row m-0">
+				<div class="col-lg-3 col-md-4 col-8 p-0">
+					<div class="navbar-header">
+						<a class="navbar-brand page-scroll" href="index.html">
+							<img alt="cryptoz" src="~/images/logo.png">
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-9 col-md-8 col-4 p-0">
+					<button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle d-block d-lg-none d-xl-none" type="button">
+						<i class="fa fa-bars"></i>
+					</button>
+					<div class="overlay"></div>
+					<div id="menu" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li class="level">
+								<a href="#banner-part" class="page-scroll nav-link" data-scroll>Главная</a>
+							</li>
+							<li class="level">
+								<a href="#about-part" class="page-scroll nav-link" data-scroll>О нАс</a>
+							</li>
+							<li class="level">
+								<a href="#services-part" class="page-scroll nav-link" data-scroll>Услуги</a>
+							</li>
+							<li class="level">
+								<a href="#roadmap-part" class="page-scroll nav-link" data-scroll>Руководство</a>
+							</li> 
+							<li class="level">
+								<a href="#faq-part" class="page-scroll nav-link" data-scroll>Вопросы</a>
+							</li> 
+							<li class="level">
+								<a href="#contact-part" class="page-scroll nav-link" data-scroll>Контакты</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- Header end -->
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+	<!-- Footer section start -->
+	<footer>
+		<div class="container">
+			<div class="footer-bottom">
+				<div class="row">
+					<div class="col-md-8">
+						<p class="mb-0">© Все права защищены 2023</p>
+					</div>
+					<div class="col-md-4">
+						<div class="social-media">
+							<ul>
+								<li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="https://instagram.com/etick.kg?igshid=NTc4MTIwNjQ2YQ=="><i class="fa fa-instagram"></i></a></li> 
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer section end -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
